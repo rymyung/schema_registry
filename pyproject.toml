@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "schema-registry"
+version = "0.1.0"
+description = "Test Schema Registry and Schema Evolution"
+authors = ["rymyung <rymyung@hanmail.net>"]
+readme = "README.md"
+packages = [{include = "schema_registry"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+protobuf = "^5.27.3"
+confluent-kafka = {extras = ["protobuf"], version = "^2.5.0"}
+pyiceberg = "^0.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
